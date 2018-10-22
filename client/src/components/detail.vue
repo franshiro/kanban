@@ -17,9 +17,6 @@
             </div>
           </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary"  data-dismiss="modal" @click="addTask">Add Task</button>
-        </div>
       </div>
     </div>
   </div>
@@ -29,14 +26,7 @@
 import database from '../assets/config.js'
 export default {
   props : ['item'],
-  data(){
-    return {
-      title : '',
-      description : '',
-      point : 0,
-      to : ''
-    }
-  },
+ 
 }
 </script>
 

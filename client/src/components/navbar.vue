@@ -20,13 +20,19 @@ export default {
   },
   data () {
     return {
-      taskName: ''
+      title: '',
+      description : '',
+      point : '',
+      to : '' 
     }
   },
   methods: {
     sendItem () {
       database.ref('/').push({
-        title: this.taskName,
+        title: this.item.title,
+        description : this.item.description,
+        point : this.item.point,
+        to : this.item.point,
         status: 'Pre-Log'
       })
       this.taskName = ''

@@ -43,6 +43,9 @@ export default {
       database.ref(`/${this.item.id}`).remove()
       database.ref('/').push({
         title: this.item.title,
+        description : this.item.description,
+        point : this.item.point,
+        to : this.item.to,
         status: this.buttonOne
       })
     },
@@ -50,6 +53,9 @@ export default {
       database.ref(`/${this.item.id}`).remove()
       database.ref('/').push({
         title: this.item.title,
+        description : this.item.description,
+        point : this.item.point,
+        to : this.item.to,
         status: this.buttonTwo
       })
     },
