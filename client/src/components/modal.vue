@@ -51,7 +51,7 @@ export default {
   },
   methods : {
     addTask(){
-        database.ref('/').push({
+        database.ref('/todo').push({
         title: this.title,
         description : this.description,
         point : this.point,

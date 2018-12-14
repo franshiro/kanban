@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <h1>Kanban</h1>
+        <h3>Task Management</h3>
         <div class="ml-auto my-2 my-lg-0">
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAddTodo">Add</button>
         </div>
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     sendItem () {
-      database.ref('/').push({
+      database.ref('/todo').push({
         title: this.item.title,
         description : this.item.description,
         point : this.item.point,

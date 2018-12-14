@@ -32,7 +32,7 @@ const taskData = [
     data: []
   }
 ]
-var leadsRef = database.ref('/')
+var leadsRef = database.ref('/todo')
 leadsRef.on('value', function (snapshot) {
   taskData[0].data = []
   taskData[1].data = []
@@ -47,6 +47,7 @@ leadsRef.on('value', function (snapshot) {
       const obj = childSnapshot.val()
       obj.id = childSnapshot.key
       taskData[1].data.push(obj)
+      console.log(obj)
     } else if (childSnapshot.val().status === 'On-Going') {
       const obj = childSnapshot.val()
       obj.id = childSnapshot.key
